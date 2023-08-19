@@ -1,1 +1,64 @@
-<h1>Example App: Home</h1>
+<div class="justify-content-center">
+  <nav class="navbar navbar-expand-lg bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="/">錢部記下來</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <form class="d-flex" role="search">
+          <button class="btn btn-warning" type="submit">登出</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="w-50 mx-auto">
+    <div class="mt-5">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>類別</option>
+        <option value="home">家居樂業</option>
+        <option value="communication">交通出行</option>
+        <option value="entertain">休閒娛樂</option>
+        <option value="food">餐飲食品</option>
+      </select>
+    </div>
+
+    <div class="my-5">
+      <div>
+        <p>總金額：</p>
+      </div>
+      <div class="fa-4x text-danger">
+        <p>$20000</p>
+      </div>
+    </div>
+
+    <div>
+      <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 bg-light">
+        <div style="display: flex">
+          <div style="display: flex">
+            <i class="fa-solid fa-utensils fa-3x" style="vertical-align: middle"></i>
+            <div class="ms-3">
+              <p>午餐</p>
+              <p>date</p>
+            </div>
+          </div>
+        </div>
+        <div class="ml-auto" style="justify-content: flex-end">
+          <p>$60</p>
+        </div>
+        <div style="display: flex">
+          <form action="/expense/edit" method="get">
+            <button class="mx-1 btn btn-secondary" type="submit">修改</button>
+          </form>
+          <form action="">
+            <button class="mx-1 btn btn-secondary" type="submit">刪除</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <form action="/expense/new" method="get">
+      <button type="submit" class="btn btn-warning">新增支出</button>
+    </form>
+  </div>
+</div>
