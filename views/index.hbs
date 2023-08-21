@@ -28,23 +28,24 @@
         <p>總金額：</p>
       </div>
       <div class="fa-4x text-danger">
-        <p name="totalAmount">$20000</p>
+        <p name="totalAmount">{{totalAmount}}</p>
       </div>
     </div>
 
     <div>
+      {{#each records}}
       <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 bg-light">
         <div style="display: flex">
           <div style="display: flex">
             <i class="fa-solid fa-utensils fa-3x" style="vertical-align: middle"></i>
             <div class="ms-3">
-              <p>午餐</p>
-              <p>date</p>
+              <p>{{this.name}}</p>
+              <p>{{date}}</p>
             </div>
           </div>
         </div>
         <div class="ml-auto" style="justify-content: flex-end">
-          <p>$60</p>
+          <p>{{this.amount}}</p>
         </div>
         <div style="display: flex">
           <form action="/expense/edit" method="get">
@@ -55,6 +56,7 @@
           </form>
         </div>
       </nav>
+      {{/each}}
     </div>
 
     <form action="/expense/new" method="get">

@@ -11,7 +11,7 @@ app.set('views', './views');
 app.use(router)
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('login')
 })
 
 app.listen(3000)
