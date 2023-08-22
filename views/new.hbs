@@ -16,7 +16,7 @@
       <p>*必填單位</p>
       <p class="ms-5">請輸入您的支出</p>
     </div>
-    <form action="" style="display: block">
+    <form action="/expense/new/add" style="display: block" method="post">
       <div class="my-5">
         <label for="">名稱* :</label>
         <input type="text" name="name" id="name" class="ms-5 w-75" required>
@@ -37,7 +37,7 @@
       </div>
       <div class="my-5">
         <label for="">金額* :</label>
-        <input type="text" name="money" id="money" class="ms-5 w-75" required>
+        <input type="text" name="amount" id="amount" class="ms-5 w-75" required>
       </div>
       <button type="submit" class="btn btn-warning">新增支出</button>
     </form>

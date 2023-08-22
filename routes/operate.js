@@ -22,5 +22,17 @@ router.get('/record', (req, res) => {
     })
 })
 
+router.post('/new/add', (req, res) => {
+  const name = req.body.name
+  const date = req.body.date
+  const amount = req.body.amount
+
+  console.log(name, date, amount)
+
+  // return Record.create({ name, date, amount })
+  //   .then(() => res.redirect('/expense/record'))
+  //   .catch((err) => console.log(err))
+})
+
 
 module.exports = router
