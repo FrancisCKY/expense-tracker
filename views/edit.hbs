@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-secondary">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="/">錢部記下來</a>
+    <a class="navbar-brand text-white" href="/expense/record">錢部記下來</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       </ul>
@@ -16,18 +16,18 @@
       <p>*必填單位</p>
       <p class="mx-5">請修改您的支出</p>
     </div>
-    <form action="" style="display: block">
+    <form action="/expense/{{record.id}}/edit?_method=PUT" style="display: block" method="post">
       <div class="my-5">
         <label for="">名稱* :</label>
-        <input type="text" name="name" id="name" class="ms-5 w-75" required>
+        <input type="text" name="name" id="name" class="ms-5 w-75" required value="{{record.name}}">
       </div>
       <div class="my-5">
         <label for="">日期* :</label>
-        <input type="date" name="date" id="date" class="ms-5 w-75" required>
+        <input type="date" name="date" id="date" class="ms-5 w-75" required value="{{record.date}}">
       </div>
       <div class="my-5" style="display: flex">
         <label for="">類別* :</label>
-        <select class="form-select ms-5 w-75" aria-label="Default select example" required>
+        <select name="category" id="category" class="category ms-5 w-75" aria-label="Default select example" required>
           <option selected>請選擇類別</option>
           <option value="home">家居樂業</option>
           <option value="communication">交通出行</option>
@@ -37,10 +37,9 @@
       </div>
       <div class="my-5">
         <label for="">金額* :</label>
-        <input type="text" name="money" id="money" class="ms-5 w-75" required>
+        <input type="text" name="amount" id="amount" class="ms-5 w-75" required value="{{record.amount}}">
       </div>
       <button type="submit" class="btn btn-warning">送出</button>
     </form>
-
   </div>
 </div>

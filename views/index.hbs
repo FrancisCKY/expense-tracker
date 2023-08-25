@@ -48,7 +48,7 @@
           <p>{{this.amount}}</p>
         </div>
         <div style="display: flex">
-          <form action="/expense/edit" method="get">
+          <form action="/expense/{{this.id}}/edit" method="get">
             <button class="mx-1 btn btn-secondary" type="submit">修改</button>
           </form>
           <form action="">
