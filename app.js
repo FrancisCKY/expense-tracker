@@ -10,8 +10,8 @@ app.set('view engine', '.hbs');
 app.set('views', './views');
 
 app.use(express.urlencoded({ extended: true }))
+app.use(methodoverride('_method'))
 app.use(router)
-app.unsubscribe(methodoverride('_method'))
 
 app.get('/', (req, res) => {
   res.render('login')

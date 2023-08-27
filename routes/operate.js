@@ -47,12 +47,20 @@ router.post('/new/add', (req, res) => {
     .catch((err) => console.log(err))
 })
 
-router.post('/:id/edit', (req, res) => {
+router.put('/:id/edit', (req, res) => {
   const body = req.body
   const id = req.params.id
 
   return Record.update({ name: body.name, date: body.date, category: body.category, amount: body.amount }, { where: { id } })
     .then(() => res.redirect('/expense/record'))
+})
+
+router.delete('/:id/delete', (req, res) => {
+  const id = req.params.id
+
+  return Record.destroy({ where: { id } })
+    .then(() => res.redirect('/expense/record'))
+    .catch((err) => console.log(err))
 })
 
 module.exports = router

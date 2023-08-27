@@ -51,7 +51,7 @@
           <form action="/expense/{{this.id}}/edit" method="get">
             <button class="mx-1 btn btn-secondary" type="submit">修改</button>
           </form>
-          <form action="">
+          <form action="/expense/{{this.id}}/delete?_method=DELETE" method="POST">
             <button class="mx-1 btn btn-secondary" type="submit">刪除</button>
           </form>
         </div>
