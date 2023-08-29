@@ -51,7 +51,7 @@ router.put('/:id/edit', (req, res) => {
   const body = req.body
   const id = req.params.id
 
-  return Record.update({ name: body.name, date: body.date, category: body.category, amount: body.amount }, { where: { id } })
+  return Record.update({ name: body.name, date: body.date, categoryId: body.categoryId, amount: body.amount }, { where: { id } })
     .then(() => res.redirect('/expense/record'))
 })
 
